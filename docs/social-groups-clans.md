@@ -433,8 +433,8 @@ curl -X PUT "http://127.0.0.1:7350/v2/group/<group id>" \
 
 ```js fct_label="JavaScript"
 const group_id = "<group id>";
-const description = "I was only kidding. Basil sauce ftw!";
-const group = await client.createGroup(session, group_id, { description: desc });
+const desc = "I was only kidding. Basil sauce ftw!";
+const group = await client.updateGroup(session, group_id, { description: desc });
 console.info("Updated group:", group);
 ```
 
