@@ -27,7 +27,7 @@ curl 'http://127.0.0.1:7350/v2/group?limit=20&name=heroes%25' \
 ```
 
 ```js fct_label="JavaScript"
-const groups = await client.listGroups(session, "heroes%", 20) // fetch first 20 groups
+const groups = await client.listGroups(session, "heroes%", null, 20) // fetch first 20 groups
 console.info("List of groups:", groups);
 ```
 
@@ -84,7 +84,7 @@ curl 'http://127.0.0.1:7350/v2/group?limit=20&name=%25heroes%25&cursor=somecurso
 ```
 
 ```js fct_label="JavaScript"
-const groups = await client.listGroups(session, "heroes%", 20, cursor);
+const groups = await client.listGroups(session, "heroes%", cursor, 20);
 console.info("List of groups:", groups);
 ```
 
